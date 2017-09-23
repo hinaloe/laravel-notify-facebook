@@ -22,6 +22,7 @@ class FacebookChannel
 
     public function send($notifable, Notification $notification)
     {
+        /** @scrutinizer ignore-call */
         $message = $notification->toFacebook($notifable);
         if (is_string($message)) {
             $message = FacebookMessage::fromString($message);
