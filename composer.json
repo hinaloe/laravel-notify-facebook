@@ -1,0 +1,43 @@
+{
+    "name": "hinaloe/laravel-notify-facebook",
+    "require": {
+        "illuminate/notifications": "~5.4.0",
+        "illuminate/support": "~5.4.0",
+        "sammyk/laravel-facebook-sdk": "^3.5",
+        "php": "~7.0"
+    },
+    "require-dev": {
+        "mockery/mockery": "^0.9.9",
+        "phpunit/phpunit": "^6.3"
+    },
+    "license": "MIT",
+    "scripts": {
+        "test": "vendor/bin/phpunit"
+    },
+    "autoload": {
+        "psr-4": {
+            "Hinaloe\\Laravel\\Channels\\Facebook\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Hinaloe\\Laravel\\Channels\\Facebook\\Test\\": "tests"
+        }
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Hinaloe\\Laravel\\Channels\\Facebook\\FacebookServiceProvider"
+            ]
+        }
+    },
+    "authors": [
+        {
+            "name": "hinaloe",
+            "email": "hina@hinaloe.net"
+        }
+    ]
+}
