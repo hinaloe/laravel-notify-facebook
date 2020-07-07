@@ -2,13 +2,13 @@ language: php
 php:
   - 7.0
   - 7.1
-  - nightly
+  - 7.2
 
 install:
   - composer install
 
 script:
-  - phpunit --coverage-text --coverage-clover=coverage.clover
+  - composer run-script test -- --coverage-text --coverage-clover=coverage.clover
 
 after_script:
   - wget https://scrutinizer-ci.com/ocular.phar
